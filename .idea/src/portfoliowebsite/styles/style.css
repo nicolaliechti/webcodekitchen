@@ -42,3 +42,10 @@ footer {
     background-color: #333;
     color: white;
 }
+
+.portrait {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
