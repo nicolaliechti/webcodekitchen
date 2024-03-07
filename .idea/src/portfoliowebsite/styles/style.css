@@ -67,6 +67,11 @@ footer {
     color: white;
 }
 
+.image img {
+    width: 300px;
+    height: auto;
+}
+
 .portrait {
     width: 200px;
     height: auto;
@@ -123,6 +128,27 @@ section {
     transform: translateY(0) scale(1);
 }
 
+.sec5 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+
+.active {
+    display: block;
+    animation: appear 1s ease-in-out;
+    transform: translateY(0) scaleY(1);
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-100%) scaleY(0);
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+
 .controls {
     position: fixed;
     z-index: 10;
@@ -154,7 +180,7 @@ section {
         box-shadow: var(--box-shadow-1);
         i {
             font-size: 1.5rem;
-                color: var(--color-grey-2);
+            color: var(--color-grey-2);
             pointer-events: none;
         }
     }
