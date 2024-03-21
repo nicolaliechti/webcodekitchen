@@ -16,6 +16,8 @@
     --second-color: rgb(0, 201, 255);
     --third-color: rgb(192, 166, 49);
     --first-shadow-color: rgb(0, 0, 0);
+    --second-shadow-color: rgb(0, 0, 0, 0.1);
+
 }
 
 * {
@@ -52,7 +54,7 @@ html {
 .btn {
     font-weight: 500;
     padding: 12px 20px;
-    background: #efefef;
+    background: var(--color-white);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -74,8 +76,11 @@ i {
 }
 
 body {
-    background: var(--body-color);
-
+    background: url(../images/scott-webb-UjupleczBOY-unsplash.jpg) repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 .container {
@@ -95,6 +100,7 @@ nav {
     padding-inline: 9vw;
     transition: .3s;
     z-index: 100;
+    box-shadow: 0 4px 6px var(--second-shadow-color);
 }
 
 .nav-logo {
@@ -157,7 +163,7 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.7);
+        background: var(--color-white);
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
@@ -187,13 +193,19 @@ nav {
     justify-content: center;
     height: 100vh;
     padding: 0 10vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px var(--second-shadow-color);
 }
 
 /* PORTRAIT IMAGE */
 .featured-portrait {
-    width: 150px;
+    width: 300px;
     height: auto;
     margin-right: 20px;
+    border-radius: 10px;
 }
 
 /* FEATURED TEXT BOX */
@@ -234,4 +246,14 @@ nav {
     color: var(--text-color-second);
 }
 
+/* FOOTER */
+.site-footer {
+    background-color: var(--first-color);
+    color: var(--color-white);
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-content {
+    margin: 20px;
+}
 
