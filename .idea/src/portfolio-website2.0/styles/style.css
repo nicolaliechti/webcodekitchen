@@ -191,13 +191,27 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 10vw;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px var(--second-shadow-color);
+    overflow: auto;
+    transition: transform 1s ease; /* Add a transition for the transform property */
+}
+
+.featured-box:nth-of-type(odd) {
+    transform: translateX(400%);
+}
+
+.featured-box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.featured-box.show {
+    transform: translateX(0);
 }
 
 /* PORTRAIT IMAGE */
@@ -253,6 +267,7 @@ nav {
     padding: 20px 0;
     text-align: center;
 }
+
 .footer-content {
     margin: 20px;
 }

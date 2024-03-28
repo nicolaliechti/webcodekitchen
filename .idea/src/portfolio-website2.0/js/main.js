@@ -7,3 +7,22 @@ function menuFunction(){
         menuBtn.className = "nav-menu";
     }
 }
+
+const sections = document.querySelectorAll(".featured-box")
+
+window.addEventListener("scroll", checkFeaturedBox);
+
+checkFeaturedBox();
+function checkFeaturedBox() {
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    sections.forEach((featuredBox) => {
+        const featuredBoxTop = featuredBox.getBoundingClientRect().top;
+
+        if (featuredBoxTop < triggerBottom) {
+            featuredBox.classList.add("show");
+        } else {
+            featuredBox.classList.remove("show");
+        }
+    });
+}
