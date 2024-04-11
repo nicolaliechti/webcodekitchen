@@ -1,3 +1,4 @@
+// Navigation Function
 function menuFunction(){
     var menuBtn = document.getElementById("navMenu");
 
@@ -7,6 +8,8 @@ function menuFunction(){
         menuBtn.className = "nav-menu";
     }
 }
+
+// Scroll Animation
 
 const sections = document.querySelectorAll(".featured-box")
 

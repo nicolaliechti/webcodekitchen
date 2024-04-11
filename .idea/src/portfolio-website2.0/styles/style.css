@@ -187,6 +187,15 @@ nav {
 }
 
 /* FEATURED BOX */
+
+.box-title {
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    margin: 0;
+}
+
 .featured-box {
     display: flex;
     align-items: center;
