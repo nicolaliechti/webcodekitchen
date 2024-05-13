@@ -283,3 +283,43 @@ nav {
 
 /* TIMELINE */
 
+
+/* PROJEKTE */
+
+.featured-box .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.featured-box .project-info {
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Für kleinere Bildschirme: Items untereinander anordnen */
+@media (max-width: 600px) {
+    .featured-box .project {
+        flex-direction: column;
+    }
+    .featured-box .project-info {
+        width: 100%;
+    }
+}
+
+.project-img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.project-img2 {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
