@@ -286,40 +286,27 @@ nav {
 
 /* PROJEKTE */
 
-.featured-box .project {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.featured-box .project-info {
-    width: 50%;
-    padding: 0 10px;
-    box-sizing: border-box;
+.project {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--second-shadow-color);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s;
 }
 
-/* Für kleinere Bildschirme: Items untereinander anordnen */
-@media (max-width: 600px) {
-    .featured-box .project {
-        flex-direction: column;
-    }
-    .featured-box .project-info {
-        width: 100%;
-    }
+.project:hover {
+    transform: scale(1.05);
 }
 
 .project-img {
-    max-width: 50%;
+    width: 100%;
     height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-    padding-bottom: 20px;
-}
-
-.project-img2 {
-    max-width: 50%;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
+    display: block;
 }
